@@ -1,12 +1,15 @@
 import csv
-from decimal import ROUND_DOWN
-from tkinter.tix import COLUMN, ROW
+#from decimal import ROUND_DOWN
+#from tkinter.tix import COLUMN, ROW
+csv_file=csv.reader(open('C:/Users/alialkirzam/OneDrive - Liverpool John Moores University/Desktop/computer scince workshop/dataset/rotten_tomatoes_movies.csv','r'))
+print(csv_file)
+
 def searchByMovieTitle():
     movie_title=str(input('Enter Movie Title\n'))
     csv_file=csv.reader(open('C:/Users/alialkirzam/OneDrive - Liverpool John Moores University/Desktop/computer scince workshop/dataset/rotten_tomatoes_movies.csv','r'))
     for row in csv_file:
         if movie_title in row[1]:
-            print(row[5:6])
+            print(row[5])
 
 def searchByGenres():
     genres=str(input('Enter Genress to Show Actors and run time\n'))
