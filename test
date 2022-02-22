@@ -1,0 +1,24 @@
+import csv
+#from decimal import ROUND_DOWN
+#from tkinter.tix import COLUMN, ROW
+csv_file=csv.reader(open('data.csv','r'))
+print(csv_file)
+
+def searchRTRatings():
+    for row in csv_file:
+        if movie_title in row[0]:
+            print(row[5])
+
+
+
+
+movie_title=str(input('Enter Movie Title\n'))
+
+print('Enter 1 to search by Movie title')
+
+options=int(input('Enter here: '))
+
+if options==1:
+    searchRTRatings()
+else:
+    print("")
