@@ -1,0 +1,18 @@
+import csv
+
+data=[]
+reader = csv.reader("data.csv")
+for row in reader:
+    data.append(row)
+
+name = input("input movie title you would like to find the rotten tomato rating")
+
+col = [x[0] for x in data]
+
+if name in col:
+    for x in range(0,len(data)):
+        if name == data[x][0]:
+            print(data[x][11])
+
+else:
+    print("name doesn't exist")
